@@ -28,44 +28,44 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    Greeting()
                 }
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column (
-        modifier = modifier
-            .fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Button(
-            onClick = { /* Do something */ },
+    @Composable
+    private fun Greeting( modifier: Modifier = Modifier) {
+        Column (
+            modifier = modifier
+                .fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("Google Sign In Pattern 1")
-        }
+            Button(
+                onClick = { /* Do something */ },
+            ) {
+                Text("Google Sign In Pattern 1")
+            }
 
-        Button(
-            onClick = { /* Do something */ },
-        ) {
-            Text("Google Sign In Pattern 2")
-        }
-        Button(
-            onClick = { /* Do something */ },
-        ) {
-            Text("Google Sign Out")
+            Button(
+                onClick = { /* Do something */ },
+            ) {
+                Text("Google Sign In Pattern 2")
+            }
+            Button(
+                onClick = { /* Do something */ },
+            ) {
+                Text("Google Sign Out")
+            }
         }
     }
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SampleGoogleSignInTheme {
-        Greeting("Android")
+    @Preview(showBackground = true)
+    @Composable
+    private fun GreetingPreview() {
+        SampleGoogleSignInTheme {
+            Greeting()
+        }
     }
 }
